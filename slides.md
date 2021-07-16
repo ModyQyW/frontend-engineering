@@ -1,5 +1,6 @@
 ---
 theme: seriph
+download: true
 ---
 
 # 前端工程化

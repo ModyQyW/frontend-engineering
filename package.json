@@ -1,14 +1,24 @@
 {
+  "name": "frontend-engineering",
+  "version": "0.0.0",
+  "author": {
+    "email": "wurui7@mail3.sysu.edu.cn",
+    "name": "ModyQyW",
+    "url": "https://modyqyw.github.io"
+  },
   "private": true,
   "scripts": {
     "dev": "slidev --open",
     "build": "slidev build",
-    "export": "slidev export"
+    "export": "slidev export",
+    "release": "release-it"
   },
   "dependencies": {
     "@slidev/cli": "~0.22.5",
     "@slidev/theme-default": "~0.19.1",
     "@slidev/theme-seriph": "~0.19.1"
   },
-  "name": "frontend-engineering"
+  "devDependencies": {
+    "release-it": "~14.10.0"
+  }
 }
