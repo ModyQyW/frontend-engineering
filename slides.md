@@ -18,7 +18,25 @@ download: true
 
 ---
 
+# 目录
+
+- 什么是前端工程化
+- 选型
+- 规范
+- 组件库和工具库
+- 测试
+- 自动化
+- 性能
+- 重构
+- 微前端
+- Serverless
+- 参考
+
+---
+
 # 什么是前端工程化
+
+<br>
 
 提升前端效率的工作，都可以认为是前端工程化。
 
@@ -37,6 +55,7 @@ download: true
 - 稳定：不会经常有破坏性更新，向后兼容度高，更新/迁移成本低
 - 易用：使用相对简单，更有可能统一技术栈，更方便不同团队间人员流动
 - 生态：需要考虑支持国内外生态，如小程序端、支付和分享场景等
+- 暂时不考虑魔改等情况（一般也不会出现需要魔改的情况）
 
 <br>
 <br>
@@ -53,10 +72,9 @@ download: true
 <br>
 <br>
 
-<div v-click class="w-full text-center text-2xl">
+<div v-click class="text-2xl">
 
-<div>Vue + uni-app</div>
-<div>大问题没有，小问题可能会遇上</div>
+Vue + uni-app：大问题没有，小问题可能会遇上
 
 </div>
 
@@ -88,7 +106,91 @@ uni-app 的文档看起来很完整，但往往在某些细节上阐述不清，
 
 ---
 
-# 代码规范
+# 规范
+
+- 帮助开发者编写相对良好的代码，提高可读性、可维护性
+- 帮助代码审查 Code Review
+- 保证团队一致性，降低沟通成本，方便不同团队间人员流动
+
+---
+
+# 规范
+
+- 帮助开发者编写相对良好的代码，提高可读性、可维护性
+- 帮助代码审查 Code Review
+- 方便不同团队间人员流动
+
+<br>
+
+```ts
+function add(a, b) {
+  return a + b;
+}
+
+function subtract(a, b) {
+  return a - b;
+}
+
+function multiple(a, b) {
+  return a * b;
+}
+
+function divide(a, b) {
+  return a / b;
+}
+```
+
+```ts
+function AdD(a ,b ){
+   return a+ b
+}
+
+function SubTracT(a ,  b ){
+  return a - b;
+}
+
+function mUltIple(a  ,b ){
+  return a *b
+}
+
+function diVide(a,   b ){
+  return a  / b;
+}
+```
+
+<style>
+.slidev-code {
+  display: inline-block;
+  width: 50%;
+}
+</style>
+
+---
+
+# 规范
+
+- Linter
+  - 检查（并修复）潜在错误的工具
+  - `ESLint`：`JavaScript` / `TypeScript`
+  - `Stylelint`：`CSS` / `LESS` / `SCSS`
+  - `Husky` + `LintStaged` + `Commitlint`：Git 提交
+- Formatter：检查（并修复）格式问题的工具
+  - 目前最流行的是 `Prettier`，支持多种语言
+  - 可以和 `ESLint`，`Stylelint` 等结合使用
+- Linter 和 Formatter 就能处理所有规范问题吗？
+  - 命名问题
+  - 换行问题
+  - 本地问题
+
+<!--
+
+命名问题：变量命名、文件命名、目录命名、项目命名
+
+换行问题：使用 Windows 系统默认的换行可能会造成影响，一般要求使用 Unix 系统默认的换行保证跨平台可用
+
+本地问题：是不是配置正确了来确保提交的代码没有问题
+
+-->
 
 ---
 
@@ -117,3 +219,7 @@ uni-app 的文档看起来很完整，但往往在某些细节上阐述不清，
 ---
 
 # Serverless
+
+---
+
+# 参考
