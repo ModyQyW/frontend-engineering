@@ -141,19 +141,19 @@ function divide(a, b) {
 ```
 
 ```ts
-function AdD(a ,b ){
+function add(a ,b ){
    return a+ b
 }
 
-function SubTracT(a ,  b ){
+function subtract(a ,  b ){
   return a - b;
 }
 
-function mUltIple(a  ,b ){
+function multiple(a  ,b ){
   return a *b
 }
 
-function diVide(a,   b ){
+function divide(a,   b ){
   return a  / b;
 }
 ```
