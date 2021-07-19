@@ -16,7 +16,8 @@
   "dependencies": {
     "@slidev/cli": "~0.22.5",
     "@slidev/theme-default": "~0.19.1",
-    "@slidev/theme-seriph": "~0.19.1"
+    "@slidev/theme-seriph": "~0.19.1",
+    "playwright-chromium": "~1.12.3"
   },
   "devDependencies": {
     "release-it": "~14.10.0"
