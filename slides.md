@@ -74,7 +74,7 @@ Powered by [Slidev](https://sli.dev/)
 
 <br>
 
-<div v-click class="text-2xl">
+<div v-click class="text-xl">
 
 Vue + uni-app：vue-cli 完整工具链，大问题没有，小问题可能会遇上
 
@@ -182,11 +182,11 @@ function diVide(a,   b ){
   - 换行问题
   - 本地问题
 
-<v-clicks>
+<div v-click class="text-xl">
 
-- [@modyqyw/fabric](https://github.com/modyqyw/fabric)
+一个边探索边更新的解决方案 [@modyqyw/fabric](https://github.com/modyqyw/fabric)
 
-</v-clicks>
+</div>
 
 <!--
 
@@ -218,6 +218,22 @@ function diVide(a,   b ){
 
 # 部署
 
+|Git Flow|Github Flow|Gitlab Flow|
+|:-:|:-:|:-:|
+|<img src="/git-flow.png" title="Git Flow" alt="Git Flow">|<img src="/github-flow.png" title="Github Flow" alt="Github Flow">|<img src="/gitlab-flow.png" title="Gitlab Flow" alt="Gitlab Flow">|
+
+<!--
+
+在正式讲部署前，先来讲讲分支模型
+
+或多或少有一些变种，比如使用 dev-[人名] 或 dev-[功能] 做开发分支等，但总体基本都是三个 Flow 之一。
+
+-->
+
+---
+
+# 部署
+
 - 传统部署：手动完成所有操作，包括提交、推送、构建、重启服务等
 
 <v-clicks>
@@ -230,40 +246,28 @@ function diVide(a,   b ){
 
 # 部署
 
-|Git Flow|Github Flow|Gitlab Flow|
-|:-:|:-:|:-:|
-|<img src="/git-flow.png" title="Git Flow" alt="Git Flow">|<img src="/github-flow.png" title="Github Flow" alt="Github Flow">|<img src="/gitlab-flow.png" title="Gitlab Flow" alt="Gitlab Flow">|
-
-<!--
-
-或多或少有一些变种，比如使用 dev-[人名] 或 dev-[功能] 做开发分支等，但总体基本都是三个 Flow 之一。
-
--->
-
----
-
-# 部署
-
-- 都城一期（egg）：脚本部署，少量手动操作
-- [Repo](https://work.iscnu.net/SystemDevelopment/_git/Ducheng)
+- [都城二期后台管理](https://work.iscnu.net/SystemDevelopment/Duchenggo/_git/desktop-web)（vue）：release-it + 脚本
+- main 分支开发 -> 提交 -> 调用 release-it 更新版本 -> shell 脚本部署到测试服务器/正式服务器
 
 <br>
 
-<img src="/ducheng-backend-release.png" class="h-8/10" title="部署步骤" alt="部署步骤">
-
----
-
-# 部署
-
-- developer-examination（vite + react + antd）：release-it + github actions + github pages
+- [developer-examination](https://github.com/MillCloud/developer-examination)（vite + react）：release-it + github actions + github pages，少量手动操作
 - main 分支开发 -> 提交 -> 调用 release-it 更新版本 -> 同步 main 分支到 release 分支 -> 触发 github actions 自动构建并部署
-- [Repo](https://github.com/MillCloud/developer-examination) & [Page](https://millcloud.github.io/developer-examination/)
 
 <br>
 
-- next-mine-sweeper-demo（next + antd）：release-it + vercel
+- [next-mine-sweeper-demo](https://github.com/ModyQyW/next-mine-sweeper-demo)（next）：release-it + vercel，少量手动操作
 - main 分支开发 -> 提交 -> 调用 release-it 更新版本 -> 同步 main 分支到 release 分支 -> 触发 vercel 自动构建并部署
-- [Repo](https://github.com/ModyQyW/next-mine-sweeper-demo) & [Page](https://next-mine-sweeper-demo.vercel.app)
+
+<div v-click class="text-xl">
+
+自动化/半自动化套路：
+
+使用 release-it 处理版本
+
+使用脚本 / 服务（vercel / netlify / azure devops pipelines / ...）构建并部署
+
+</div>
 
 <!--
 
@@ -275,23 +279,9 @@ function diVide(a,   b ){
 
 # 部署
 
-- 都城一期 Egg.js：都城一期 Egg.js：脚本部署，少量手动操作
-- developer-examination：release-it + github actions + github pages
-- next-mine-sweeper-demo：release-it + vercel
-- release-it + vercel / netlify / azure devops pipelines / ...
-- ...
-
 <br>
 
-<v-click>
-
-涉及到敏捷开发、持续集成、持续交付和持续部署
-
-</v-click>
-
----
-
-# 部署
+半自动化/自动化部署还会涉及到敏捷开发、持续集成、持续交付和持续部署等概念
 
 |敏捷开发|持续集成|
 |:-:|:-:|
@@ -315,10 +305,29 @@ function diVide(a,   b ){
 
 # 优化
 
-TODO
+- 借助工具来帮助优化
+- 代码优化
+  - 规范
+  - 分析：lighthouse
+  - 监控：sentry
+  - 重构：《重构：改善既有代码的设计》
+- 项目优化
+  - 完善文档：markdown，是什么、为什么、怎么做、谁负责、谁来做、做多久
+  - 微前端：qiankun，微前端有必要吗
+  - 全栈：MERN、MEVN 的可能性
+  - Serverless：Amazon Web Service、Google Cloud、阿里云、腾讯云，我们是不是真的需要全套云服务
 
-- 代码优化：规范 / 手动优化 / 重构 / 监控
-- 项目优化：文档 / 微前端 / 全栈 / Serverless
+<div v-click class="text-xl">
+
+数据结构和算法、设计模式、架构
+
+</div>
+
+<!--
+
+在这里我不打算对所有都展开讲述，因为每一个要讲都很复杂，这里就大概讲讲重构和文档
+
+-->
 
 ---
 
@@ -328,5 +337,3 @@ TODO
 - [敏捷开发入门教程](https://www.ruanyifeng.com/blog/2019/03/agile-development.html)
 - [持续集成是什么](https://www.ruanyifeng.com/blog/2015/09/continuous-integration.html)
 - [useEffect 完整指南](https://overreacted.io/zh-hans/a-complete-guide-to-useeffect/)
-
----
