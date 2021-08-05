@@ -8,18 +8,18 @@
   },
   "private": true,
   "scripts": {
-    "dev": "slidev --open",
+    "dev": "slidev --open --remote",
     "build": "slidev build",
     "export": "slidev export",
     "release": "release-it"
   },
   "dependencies": {
-    "@slidev/cli": "~0.22.5",
+    "@slidev/cli": "~0.22.7",
     "@slidev/theme-default": "~0.19.1",
     "@slidev/theme-seriph": "~0.19.1",
-    "playwright-chromium": "~1.12.3"
+    "playwright-chromium": "~1.13.1"
   },
   "devDependencies": {
-    "release-it": "~14.10.0"
+    "release-it": "~14.10.1"
   }
 }
