@@ -63,7 +63,7 @@ Powered by [Slidev](https://sli.dev/)
   - 项目配置（如路由、状态管理、工具类库等）没有规律
     - 每次加入项目开发都需要额外花时间去梳理，带来隐性的时间成本，不利于前端在不同项目间流动
   - 底层工具链用到了 [Metro](https://facebook.github.io/metro/)、[Webpack](https://webpack.docschina.org/)、[Gulp](https://www.gulpjs.com.cn/)、[VueCLI](https://cli.vuejs.org/zh/) 等
-    - 错综复杂，难以简单地维护或升级
+    - 错综复杂，难以维护或升级
 
 <!--
 
@@ -141,16 +141,16 @@ Powered by [Slidev](https://sli.dev/)
 
 # 选型
 
-- React 的心智负担较重，相对 Vue 而言难学难精，团队内也没有多少人会 React，其次排除。
+- React 的心智负担较重，相对 Vue 难学难精，团队内也没有多少人会 React，也排除。
   - [class example](https://codesandbox.io/s/elated-snow-8z7iu)
   - [function example](https://codesandbox.io/s/w2wxl3yo0l)
+- 最后只剩下 Vue 了。
 
 ---
 
 # 选型
 
-- 最后只剩下 Vue 了。
-- 优点
+- Vue 的优点
   - 国内外对 Vue 的支持都不错，有问题一般都能查询到相应解决方案。可以用 UniApp 开发小程序和移动端应用，用 Cordova 和 Capacitor 开发移动端应用，用 Electron 开发桌面端应用。
   - 学习使用成本低，中文文档非常完整且有指导思想，学习曲线不陡峭，不用立刻接受过多的新概念。
   - VueCLI 提供了完整的底层工具链，也很容易扩展、维护、升级，另外也有一些社区插件、库、框架以实现约定式配置。
@@ -158,7 +158,12 @@ Powered by [Slidev](https://sli.dev/)
     - vuex-orm
     - Nuxt
   - 前端团队目前大部分人都会 Vue，不需要过多折腾。
-- 缺点
+
+---
+
+# 选型
+
+- Vue 的缺点
   - UniApp 很多细节仍需要打磨（HBuilderX 想自立生态但支持度不足，编译器存在缺陷，文档不够友好等），开发小程序、移动端应用、桌面端应用很需要用 80% 的时间解决 20% 的问题。
 
 ---
