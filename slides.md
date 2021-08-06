@@ -1,6 +1,7 @@
 ---
 theme: seriph
 download: true
+highlighter: shiki
 ---
 
 # 前端工程化
@@ -133,54 +134,152 @@ Powered by [Slidev](https://sli.dev/)
 |:-:|:-:|
 |<img src="/google-react-vue-angular.png" alt="google-react-vue-angular.png" title="google-react-vue-angular">|<img src="/baidu-react-vue-angular.png" alt="baidu-react-vue-angular.png" title="baidu-react-vue-angular">|
 
-谷歌显示总体上 React > Vue > Angular，百度显示总体上 Vue > React > Angular。
+总体上看，国外更关注 React，国内更关注 Vue，Angular 垫底。
 
-国内更关注 Vue，国外更关注 React。考虑到 Angular 对小程序支持不佳，先排除 Angular。
+Angular 对小程序支持不佳，先排除 Angular。
 
----
+<!--
 
-# 选型
+前端三大框架，也就是 React、Vue、Angular 这三个，生态相对成熟，我们也不需要考虑太多，直接在这三个里面选一个就好了。
 
-- React 的心智负担较重，相对 Vue 难学难精，团队内也没有多少人会 React，也排除。
-  - [class example](https://codesandbox.io/s/elated-snow-8z7iu)
-  - [function example](https://codesandbox.io/s/w2wxl3yo0l)
-- 最后只剩下 Vue 了。
+这里我收集了以下谷歌和百度上三大框架的搜索趋势，可以从图里看出来，国外比较关注 React，国内比较关注 Vue。
 
----
+国内外关注 Angular 的都比较少，再加上 Angular 没有支持小程序的成熟方案，这里可以先排除掉 Angular。
 
-# 选型
-
-- Vue 的优点
-  - 国内外对 Vue 的支持都不错，有问题一般都能查询到相应解决方案。可以用 UniApp 开发小程序和移动端应用，用 Cordova 和 Capacitor 开发移动端应用，用 Electron 开发桌面端应用。
-  - 学习使用成本低，中文文档非常完整且有指导思想，学习曲线不陡峭，不用立刻接受过多的新概念。
-  - VueCLI 提供了完整的底层工具链，也很容易扩展、维护、升级，另外也有一些社区插件、库、框架以实现约定式配置。
-    - vue-cli-plugin-auto-routing
-    - vuex-orm
-    - Nuxt
-  - 前端团队目前大部分人都会 Vue，不需要过多折腾。
+-->
 
 ---
 
 # 选型
 
-- Vue 的缺点
-  - UniApp 很多细节仍需要打磨（HBuilderX 想自立生态但支持度不足，编译器存在缺陷，文档不够友好等），开发小程序、移动端应用、桌面端应用很需要用 80% 的时间解决 20% 的问题。
+- React 的心智负担较重，相比 Vue 而言难学难精，团队内也没有多少人会 React，也排除。
+  - [Class Example](https://codesandbox.io/s/elated-snow-8z7iu)
+  - [Function Example](https://codesandbox.io/s/w2wxl3yo0l)
+
+<!--
+
+再来看看 React。React 的心智负担也是出了名的重，换句话说，思考方式比较反直觉。
+
+下面就来看一下两个例子。
+
+相对 Vue 来说，难学，也难精通，再加上前端团队里没有多少个会 React 的，那就把 React 也排除掉了。
+
+-->
+
+---
+
+# 选型
+
+- Vue 一直在维护更新，有问题一般都能查询到相应解决方案
+  - UniApp：多端小程序和移动端应用
+  - Cordova 和 Capacitor：开发移动端应用
+  - Electron：开发桌面端应用
+- 学习使用成本低，中文文档完整友好，学习曲线平缓。
+- VueCLI 提供了完整的底层工具链，也很容易扩展、维护、升级，另外也有一些社区插件、库、框架以实现约定式配置。
+  - [vue-cli-plugin-auto-routing](https://github.com/ktsn/vue-cli-plugin-auto-routing)：约定式路由
+  - [VuexORM](https://vuex-orm.org/)：Vuex Object-Relational Mapping 对象关系映射
+  - [Nuxt](https://nuxtjs.org/)：开箱即用的 SSR、SSG 支持，还附带约定式路由等额外功能
+  - [Lodash](https://lodash.com/)，[Validator](https://github.com/validatorjs/validator.js)，[DayJS](https://dayjs.gitee.io/)，[Axios](https://axios-http.com/)，[SWRV](https://docs-swrv.netlify.app/)，[VueQuery](https://vue-query.vercel.app/)：可靠的工具类库
+- 前端团队目前大部分人都会 Vue，不需要过多折腾。
+
+<!--
+
+最后也就只剩下了 Vue。我们来盘一下 Vue 的优点。
+
+……
+
+-->
+
+---
+
+# 选型
+
+- Vue 本身缺点不明显，但 UniApp 缺点很明显。
+  - 想借助 UniApp、UniCloud 和 HBuilderX 想自立生态，但官方投入和社区支持均不足，很多细节需要打磨
+  - 没有文档编写指南，官方文档较为混乱、分散
+  - 编译存在细节缺陷，一些边缘情况编译出来不支持运行，需要人工介入
+
+```vue
+<template>
+  <!-- 编译出来 class 依然分行，微信开发者工具报错无法运行 -->
+  <button
+    type="button"
+    class="
+      flex
+      items-center
+      justify-center
+      w-full
+      text-center
+    "
+  >
+    Reset
+  </button>
+</template>
+```
+
+<style>
+.shiki-container {
+  width: 50%;
+  margin: 0 auto;
+}
+</style>
+
+<!--
+
+说完了优点，我们再来说一下缺点。
+
+……
+
+-->
+
+---
+
+# 选型
+
+- [MillCloud/boilerplate-vue](https://github.com/MillCloud/boilerplate-vue) - 桌面端网页、移动端网页、桌面端应用
+- [MillCloud/boilerplate-uni-app](https://github.com/MillCloud/boilerplate-uni-app) - 小程序、移动端应用
 
 ---
 
 # 规范
 
-- 帮助开发者编写相对良好的代码，提高可读性、可维护性，也能帮助代码审查 Code Review
-- 统一代码风格、代码样式、组件库、工具库等，保证团队一致性，降低沟通成本，方便不同团队间人员流动
+- 现状：没有标准
+- 目标：形成统一的标准，而且尽量严格，避免劣质代码，方便代码审查等
+
+<v-clicks>
+
+标准包括了什么？
+
+只考虑代码质量就足够了吗？
+
+</v-clicks>
+
+<!--
+
+讲完了选型，我们再来讲讲规范相关的东西。
+
+前面的约定式配置算不算规范呢？算，它更侧重于项目规范。这里要讲的规范，更侧重于代码规范。
+
+那代码规范现在是什么情况呢？跟选型类似，代码规范也没有一个标准，可能一个项目里是严格标准，另一个项目里又是宽松标准了。
+
+尽管有工具可以辅助我们执行这些标准，但从过往的经验来看，有工具还不够，还需要尽量严格，越是严格，出错的概率也就越小。
+
+统一了之后，好处就在于最大限度地阻止了劣质代码的出现，代码审查之类的需要阅读源码的工作也更轻松。
+
+但紧接着，我们还需要解决另一个问题，那就是代码规范标准都包括了什么？我们都知道代码都要正常地跑起来，所以我们的代码规范标准自然要包括代码质量。但是这样就足够了吗？
+
+-->
 
 ---
 
 # 规范
 
-- 帮助开发者编写相对良好的代码，提高可读性、可维护性，也能帮助代码审查 Code Review
-- 统一代码风格、代码样式、组件库、工具库等，保证团队一致性，降低沟通成本，方便不同团队间人员流动
+<v-click>
 
-<br>
+|<mdi-check mx="auto" />|<mdi-close mx="auto" />|
+|:-:|:-:|
+
+</v-click>
 
 ```ts
 function add(a, b) {
@@ -201,62 +300,65 @@ function divide(a, b) {
 ```
 
 ```ts
-function add(a ,b ){
-   return a+ b
+function add(a, b){
+  return a + b
 }
 
-function subtract(a ,  b ){
+function subtract(a, b){
   return a - b;
 }
 
-function multiple(a  ,b ){
-  return a *b
+function multiple(a, b) {
+  return a * b
 }
 
-function divide(a,   b ){
-  return a  / b;
+function divide(a, b) {
+  return a / b;
 }
 ```
 
 <style>
-.slidev-code {
-  display: inline-block;
+.shiki-container {
+  display: inline-flex;
+  flex-direction: row;
   width: 50%;
 }
+
+.slidev-code {
+  width: 100%;
+}
 </style>
+
+<!--
+
+我们来看一下下面两组代码，它们都实现了加减乘除的方法，各位可以自己比较一下优劣。
+
+功能上都是一致的，但是普遍认为，右边的代码更糟糕。为什么？还是没有统一的问题。
+
+普遍认为，代码质量和代码风格都是代码规范标准的一部分。
+
+-->
 
 ---
 
 # 规范
 
-- Linter
-  - 检查（并修复）潜在错误的工具
-  - ESLint：JavaScript / TypeScript
-  - Stylelint：CSS / LESS / SCSS
-  - Husky + LintStaged + Commitlint：Git 提交
-- Formatter：检查（并修复）格式问题的工具
-  - 目前最流行的是 Prettier，支持多种语言
-  - 可以和 ESLint，Stylelint 等结合使用
-- Linter 和 Formatter 就能处理所有规范问题吗？
-  - 命名问题
-  - 换行问题
-  - 本地问题
+<v-clicks>
 
-<div v-click class="text-xl">
+- 代码规范标准
+  - 代码质量：代码能不能完成需求，代码是否低耦合，代码性能是否足够好，语义化程度等
+  - 代码风格：换行，分号，逗号，空格，属性顺序等
+- 执行
+  - 借助工具：ESLint，Stylelint，Prettier，Markdownlint，Commitlint，Husky，LintStaged……
+  - 借助人力（代码审查）：处理工具无法处理的问题，耦合度、性能、语义化等
 
-一个边探索边更新的解决方案 [@modyqyw/fabric](https://github.com/modyqyw/fabric)
+</v-clicks>
 
-</div>
+---
 
-<!--
+# 规范
 
-命名问题：变量命名、文件命名、目录命名、项目命名
-
-换行问题：使用 Windows 系统默认的换行可能会造成影响，一般要求使用 Unix 系统默认的换行保证跨平台可用
-
-本地问题：是不是配置正确了来确保提交的代码没有问题
-
--->
+- [ModyQyW/fabric](https://github.com/MillCloud/fabric) - 用于不同 JavaScript / TypeScript 项目里的规范合集
 
 ---
 
@@ -264,13 +366,19 @@ function divide(a,   b ){
 
 - 当构建可靠的应用时，测试在个人或团队构建新特性、重构代码、修复 bug 等工作中扮演了关键角色
 - 在 web 应用领域内主要有三大类
-  - 单元测试：Jest、Mocha
-  - 组件测试：Testing Library
-  - 端到端测试：Cypress
+  - 单元测试：[Jest](https://jestjs.io/zh-Hans/)、[Mocha](https://mochajs.org/)
+  - 组件测试：[Testing Library](https://testing-library.com/)
+  - 端到端测试：[Cypress](https://www.cypress.io/)
 
 <!--
 
-在这里我不打算展开讲述，因为司内项目一般没有预留时间给开发写测试代码，但是在做组件库、工具库之类的时候，测试往往是必不可少的，感兴趣的可以去自己学习一下
+然后我们再来简单地说说测试这部分。
+
+测试就是为了找出代码潜在的问题，提高代码质量的。
+
+但我不打算展开讲述，因为我们公司内项目一般没有预留时间给开发写测试代码，但是在做组件库、工具库之类的时候，测试往往是必不可少的。
+
+主要涉及的库已经列写在下面了，感兴趣的可以去自己学习一下。
 
 -->
 
@@ -398,4 +506,3 @@ function divide(a,   b ){
 - [带你入门前端工程](https://woai3c.gitee.io/introduction-to-front-end-engineering/)
 - [敏捷开发入门教程](https://www.ruanyifeng.com/blog/2019/03/agile-development.html)
 - [持续集成是什么](https://www.ruanyifeng.com/blog/2015/09/continuous-integration.html)
-- [useEffect 完整指南](https://overreacted.io/zh-hans/a-complete-guide-to-useeffect/)
