@@ -178,6 +178,7 @@ Angular 对小程序支持不佳（相关项目只有一个 [angular-miniprogram
   - [UniApp](https://uniapp.dcloud.io/)：多端小程序和移动端应用
   - [Cordova](https://cordova.apache.org/) 和 [Capacitor](https://capacitorjs.com/)：移动端应用
   - [Electron](https://www.electronjs.org/)：桌面端应用
+- 前端团队目前大部分人都会 Vue，不需要过多折腾。
 
 <!--
 
@@ -202,7 +203,6 @@ Angular 对小程序支持不佳（相关项目只有一个 [angular-miniprogram
   - [Nuxt](https://nuxtjs.org/)：开箱即用的 SSR、SSG 支持，还附带约定式路由等额外功能
   - [Lodash](https://lodash.com/)，[Validator](https://github.com/validatorjs/validator.js)，[DayJS](https://dayjs.gitee.io/)，[Iconify](https://iconify.design/)，[Remixicon](https://remixicon.com/)，[Axios](https://axios-http.com/)，[SWRV](https://docs-swrv.netlify.app/)，[VueQuery](https://vue-query.vercel.app/)，[TailwindCSS](https://tailwindcss.com/)，[WindiCSS](https://windicss.org/)……
 - 备选 Vite，生态飞速发展中。
-- 前端团队目前大部分人都会 Vue，不需要过多折腾。
 
 ---
 
@@ -530,6 +530,8 @@ pageCount 和 shouldUpdate 采用了不同的命名方式，不够统一。
 ---
 
 # 发布和部署
+
+<br>
 
 - 使用 release-it 和脚本处理版本号、改动日志和推送到仓库
 - 使用脚本和服务构建并推送到服务器
