@@ -208,8 +208,8 @@ Angular 对小程序支持不佳（相关项目只有一个 [angular-miniprogram
 
 # 选型
 
-- Vue 本身缺点不明显，但 UniApp 缺点很明显。
-  - 想借助 UniApp、UniCloud 和 HBuilderX 想自立生态，但官方投入和社区支持均不足，很多细节需要打磨
+- Vue 本身没什么缺点，但 UniApp 缺点很明显。
+  - 想借助 UniApp、UniCloud 和 HBuilderX 自立生态，但官方投入和社区支持均不足，很多细节需要打磨
   - 官方指引较为混乱、分散
   - 编译存在细节缺陷，一些边缘情况编译出来不支持运行，需要人工介入
 
@@ -353,8 +353,10 @@ pageCount 和 shouldUpdate 采用了不同的命名方式，不够统一。
 - 执行
   - 借助工具：ESLint，Stylelint，Prettier，Markdownlint，Commitlint，Husky，LintStaged……
   - 借助人力：代码审查，处理工具无法处理的问题
+  - [谷歌工程实践文档](https://google.github.io/eng-practices/)
   - [Code Review 最佳实践](https://zhuanlan.zhihu.com/p/73809355)
   - [前端 Code Review 指北](https://blog.csdn.net/Tencent_TEG/article/details/119791977)
+  - [@modyqyw/fabric](https://github.com/ModyQyW/fabric)
 
 </v-clicks>
 
@@ -370,11 +372,11 @@ pageCount 和 shouldUpdate 采用了不同的命名方式，不够统一。
 
 首先自然是借助工具，业界常用的工具有 ESLint，Stylelint，Prettier，Markdownlint，Commitlint，Husky，LintStaged 等，基本覆盖了大多数方面。
 
-前面提到的模板已经给出了示例，感兴趣可以去看看怎么配置工具。
-
 其次就是要借助人力了，也就是代码审查，Code Review。工具不能处理所有的问题，比如代码质量、语义化等等，这些大部分都是要人力分辨的。
 
 关于 Code Review，其实可讲的还有很多，但是由于时间关系，这里就不再展开，感兴趣可以看一下链接里的内容。
+
+还有就是，前面三个模板使用的规范是我自己整合的库，感兴趣可以自己看一下。
 
 -->
 
