@@ -193,15 +193,14 @@ Angular 对小程序支持不佳（相关项目只有一个 [angular-miniprogram
 # 选型
 
 - VueCLI 提供了完整的底层工具链，也很容易扩展、维护、升级，另外也有一些社区插件、库、框架以实现约定式配置。
-  - [vue-cli-plugin-auto-routing](https://github.com/ktsn/vue-cli-plugin-auto-routing)：约定式路由
-  - [VuexORM](https://vuex-orm.org/)：Vuex Object-Relational Mapping 对象关系映射
-  - [Pinia](https://pinia.esm.dev/) - 对 Vuex 的改进尝试
+  - [vue-cli-plugin-auto-routing](https://github.com/ktsn/vue-cli-plugin-auto-routing) - 约定式路由
+  - [VuexORM](https://vuex-orm.org/)、[Pinia](https://pinia.esm.dev/)、[Hamlem](https://harlemjs.com/) - 对 vuex 的改进尝试
   - [@vue/composition-api](https://github.com/vuejs/composition-api) - 把 Vue 3 Composition API 带到 Vue 2
   - [UnpluginVue2ScriptSetup](https://github.com/antfu/unplugin-vue2-script-setup) - 把 Vue 3 `<script setup>` 带到 Vue 2
   - [UnpluginVueComponents](https://github.com/antfu/unplugin-vue-components) - 自动导入组件
   - [UnpluginIcons](https://github.com/antfu/unplugin-icons) - 自动导入图标
   - [Nuxt](https://nuxtjs.org/)：开箱即用的 SSR、SSG 支持，还附带约定式路由等额外功能
-  - [Lodash](https://lodash.com/)，[Validator](https://github.com/validatorjs/validator.js)，[DayJS](https://dayjs.gitee.io/)，[Iconify](https://iconify.design/)，[Remixicon](https://remixicon.com/)，[Axios](https://axios-http.com/)，[SWRV](https://docs-swrv.netlify.app/)，[VueQuery](https://vue-query.vercel.app/)，[TailwindCSS](https://tailwindcss.com/)，[WindiCSS](https://windicss.org/)……
+  - [Lodash](https://lodash.com/)、[Validator](https://github.com/validatorjs/validator.js)、[DayJS](https://dayjs.gitee.io/)、[Iconify](https://iconify.design/)、[Remixicon](https://remixicon.com/)、[Axios](https://axios-http.com/)、[SWRV](https://docs-swrv.netlify.app/)、[VueQuery](https://vue-query.vercel.app/)、[TailwindCSS](https://tailwindcss.com/)，[WindiCSS](https://windicss.org/)……
 - 备选 Vite，生态飞速发展中。
 
 ---
@@ -249,9 +248,9 @@ Angular 对小程序支持不佳（相关项目只有一个 [angular-miniprogram
 
 # 选型
 
-- MillCloud/boilerplate-vue2 - 桌面端网页、移动端网页 [Github](https://github.com/MillCloud/boilerplate-vue2) [Gitee](https://gitee.com/MillCloud/boilerplate-vue2)
-- MillCloud/boilerplate-uni-app-vue2 - 小程序、移动端应用 [Github](https://github.com/MillCloud/boilerplate-uni-app-vue2) [Gitee](https://gitee.com/MillCloud/boilerplate-uni-app-vue2)
-- MillCloud/boilerplate-vue3 - 桌面端网页、移动端网页，WIP [Github](https://github.com/MillCloud/boilerplate-vue3) [Gitee](https://gitee.com/MillCloud/boilerplate-vue3)
+- MillCloud/boilerplate-vue2 - 桌面端网页、移动端网页，[Github](https://github.com/MillCloud/boilerplate-vue2)，[Gitee](https://gitee.com/MillCloud/boilerplate-vue2)
+- MillCloud/boilerplate-uni-app-vue2 - 小程序、移动端应用，[Github](https://github.com/MillCloud/boilerplate-uni-app-vue2)，[Gitee](https://gitee.com/MillCloud/boilerplate-uni-app-vue2)
+- MillCloud/boilerplate-vue3 - 桌面端网页、移动端网页，WIP，[Github](https://github.com/MillCloud/boilerplate-vue3)，[Gitee](https://gitee.com/MillCloud/boilerplate-vue3)
 
 <!--
 
@@ -353,10 +352,7 @@ pageCount 和 shouldUpdate 采用了不同的命名方式，不够统一。
 - 执行
   - 借助工具：ESLint，Stylelint，Prettier，Markdownlint，Commitlint，Husky，LintStaged……
   - 借助人力：代码审查，处理工具无法处理的问题
-  - [谷歌工程实践文档](https://google.github.io/eng-practices/)
-  - [Code Review 最佳实践](https://zhuanlan.zhihu.com/p/73809355)
-  - [前端 Code Review 指北](https://blog.csdn.net/Tencent_TEG/article/details/119791977)
-  - [@modyqyw/fabric](https://github.com/ModyQyW/fabric)
+  - [设计模式](https://refactoringguru.cn/design-patterns/catalog)，[谷歌工程实践文档](https://google.github.io/eng-practices/)，[Code Review 最佳实践](https://zhuanlan.zhihu.com/p/73809355)，[前端 Code Review 指北](https://blog.csdn.net/Tencent_TEG/article/details/119791977)，[@modyqyw/fabric](https://github.com/ModyQyW/fabric)
 
 </v-clicks>
 
@@ -386,9 +382,9 @@ pageCount 和 shouldUpdate 采用了不同的命名方式，不够统一。
 
 - 当构建可靠的应用时，测试在个人或团队构建新特性、重构代码、修复 bug 等工作中扮演了关键角色
 - 在 web 应用领域内主要有三大类
-  - 单元测试：[Jest](https://jestjs.io/zh-Hans/)
+  - 单元测试：[Jest](https://jestjs.io/zh-Hans/)、[Mocha](https://mochajs.org/)
   - 组件测试：[Testing Library](https://testing-library.com/)
-  - 端到端测试：[Cypress](https://www.cypress.io/)
+  - 端到端测试：[Cypress](https://www.cypress.io/)、[Nightwatch](https://nightwatchjs.org/)、[WebdriverIO](https://webdriver.io/)
 
 <!--
 
@@ -448,6 +444,8 @@ pageCount 和 shouldUpdate 采用了不同的命名方式，不够统一。
 |测试驱动开发 TDD|
 |:-:|
 |<img src="/tdd.webp" alt="tdd.webp" title="tdd" class="mx-auto w-1/2" >|
+
+领域驱动开发 DDD
 
 <!--
 
@@ -512,7 +510,7 @@ pageCount 和 shouldUpdate 采用了不同的命名方式，不够统一。
 
 - main 分支开发
 - release-it 更新版本，JavaScript 脚本更新 manifest.json，最后推送到仓库
-- HBuilderX 构建出 APK / IPA 手动处理
+- 手动用 HBuilderX 构建出 APK / IPA 再处理
 
 ---
 
@@ -593,7 +591,7 @@ Gitlab Flow 结合了 Git Flow 和 Github Flow 的优点，也是我个人比较
 # 展望
 
 - Node 全栈和 Serverless - [express](https://expressjs.com/)，[koa](https://koajs.com/)，[egg](https://eggjs.org/)，[serverless](https://serverless.com/)，[midway](https://www.midwayjs.org/)，[nest](https://nestjs.com/)
-- 面向现代浏览器的前端开发：Vite、Vue 3……
+- 面向现代浏览器的前端开发：[Vite](https://cn.vitejs.dev/)、[Vue 3](https://v3.cn.vuejs.org/)……
 - ...
 
 ---
