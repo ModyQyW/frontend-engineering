@@ -14,12 +14,12 @@
     "release": "release-it"
   },
   "dependencies": {
-    "@slidev/cli": "~0.23.0",
+    "@slidev/cli": "~0.25.8",
     "@slidev/theme-default": "~0.21.0",
     "@slidev/theme-seriph": "~0.21.0",
-    "playwright-chromium": "~1.14.1"
+    "playwright-chromium": "~1.15.0"
   },
   "devDependencies": {
-    "release-it": "~14.11.5"
+    "release-it": "~14.11.6"
   }
 }
