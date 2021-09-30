@@ -194,7 +194,7 @@ Angular 对小程序支持不佳（相关项目只有一个 [angular-miniprogram
 
 - VueCLI 提供了完整的底层工具链，也很容易扩展、维护、升级，另外也有一些社区插件、库、框架以实现约定式配置。
   - [vue-cli-plugin-auto-routing](https://github.com/ktsn/vue-cli-plugin-auto-routing) - 约定式路由
-  - [VuexORM](https://vuex-orm.org/)、[Pinia](https://pinia.esm.dev/)、[Hamlem](https://harlemjs.com/) - 对 vuex 的改进尝试
+  - [VuexORM](https://vuex-orm.org/)、[Pinia](https://pinia.esm.dev/)、[Hamlem](https://harlemjs.com/)、[VuexPersistedState](https://github.com/robinvdvleuten/vuex-persistedstate) - 对 vuex 的改进尝试
   - [@vue/composition-api](https://github.com/vuejs/composition-api) - 把 Vue 3 Composition API 带到 Vue 2
   - [UnpluginVue2ScriptSetup](https://github.com/antfu/unplugin-vue2-script-setup) - 把 Vue 3 `<script setup>` 带到 Vue 2
   - [UnpluginVueComponents](https://github.com/antfu/unplugin-vue-components) - 自动导入组件
