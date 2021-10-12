@@ -30,6 +30,8 @@ Powered by [Slidev](https://sli.dev/)
 - 发布和部署
 - 参考
 
+Vue 在没有说明版本时，默认指 Vue2。TailwindCSS 在没有说明版本时，默认指 TailwindCSS1。
+
 <!--
 
 整个分享会会涉及下面四个部分：选型，规范，测试，发布和部署。
@@ -96,7 +98,7 @@ Powered by [Slidev](https://sli.dev/)
 
 怎么统一？怎么选？
 
-- 生态支持：生态支持要足够好，方便遇到问题的时候查找解决方案
+- 生态支持：生态支持要足够好足够稳定，方便遇到问题的时候查找解决方案
 - 学习成本低：学习使用成本低，最好有中文文档，方便扩展团队和前端流动
 - 维护成本低：方便长生命周期产品后续维护
 - 适合团队：当前大部分团队成员都掌握
@@ -111,11 +113,11 @@ Powered by [Slidev](https://sli.dev/)
 
 统一配置约定就是说不要一个项目一套配置，尽量使用约定式配置，比如统一使用 DayJS，统一使用基于文件系统的路由等等。
 
-统一底层工具链就是不要直接用 Webpack、Rollup 之类的工具，而是使用封装好的脚手架，最好是官方提供的，比如 VueCLI 和 CreateReactApp。
+统一底层工具链就是不要直接用 Webpack、Rollup 之类的工具，而是使用封装好的脚手架，比如 VueCLI，Nuxt，CreateReactApp，Umi 和 Next。
 
 那要怎么统一呢？也就是说，要选满足什么条件的呢？
 
-第一个是要有足够的生态支持，尤其是要有国内生态的支持度，要考虑到接入微信、支付宝之类的 API，还要考虑可能要上不同平台的小程序，最好还要有活跃的社区，这样方便遇到问题尤其是国内特有问题的时候查找解决方案。
+第一个是要有足够的生态支持，尤其是要有国内生态的支持度，要考虑到接入微信、支付宝之类的 API，还要考虑可能要上不同平台的小程序，最好还要有活跃的社区，这样方便遇到问题尤其是国内特有问题的时候查找解决方案。稳定度也是一个问题，一般不会考虑在非常正式的项目里使用太新的技术栈，那样可能会踩坑耗费过多的时间。
 
 第二个是学习成本要低，最好要有中文文档，这样的话好招人，也方便前端学习了之后在不同项目间流动。
 
@@ -129,7 +131,7 @@ Powered by [Slidev](https://sli.dev/)
 
 # 选型
 
-- 前端三大框架的生态相对成熟，暂时不需要去考虑新兴之秀 Svelte、Solid
+- React、Vue2、Angular 生态相对成熟，不考虑 Svelte、Solid、Vue3
 
 |google|baidu|
 |:-:|:-:|
@@ -141,7 +143,7 @@ Angular 对小程序支持不佳（相关项目只有一个 [angular-miniprogram
 
 <!--
 
-前端三大框架，也就是 React、Vue、Angular 这三个，生态相对成熟，我们也不需要考虑太多，直接在这三个里面选一个就好了。不要看到 Svelte、Sold 最近的讨论度比较高就想去用，它们的生态都是不如三大框架的。
+React、Vue2、Angular 这三个，也就是前端三大框架，生态相对成熟，我们也不需要考虑太多，直接在这三个里面选一个就好了。不要考虑 Svelte、Solid、Vue3，Svelte 和 Solid 生态不够成熟，Vue3 不够稳定。
 
 这里我收集了谷歌和百度上三大框架的搜索趋势，可以从图里看出来，国外比较关注 React，国内比较关注 Vue。
 
@@ -163,7 +165,7 @@ Angular 对小程序支持不佳（相关项目只有一个 [angular-miniprogram
 
 再来看看 React。React 的心智负担比较重，换句话说就是思考方式比较反直觉。
 
-下面就来看一下两个例子。
+下面就来看一下两个例子。点击 3 次 Click Me，然后点击 Show Alert，再点击 2 次 Click Me，等待 alert 弹出。
 
 相对 Vue 来说，难学，也难精通，再加上前端团队里没有多少个会 React 的，更不要说用好了，所以把 React 也排除掉了。
 
@@ -194,14 +196,11 @@ Angular 对小程序支持不佳（相关项目只有一个 [angular-miniprogram
 
 - VueCLI 提供了完整的底层工具链，也很容易扩展、维护、升级，另外也有一些社区插件、库、框架以实现约定式配置。
   - [vue-cli-plugin-auto-routing](https://github.com/ktsn/vue-cli-plugin-auto-routing) - 约定式路由
-  - [VuexORM](https://vuex-orm.org/)、[Pinia](https://pinia.esm.dev/)、[Hamlem](https://harlemjs.com/)、[VuexPersistedState](https://github.com/robinvdvleuten/vuex-persistedstate) - 对 vuex 的改进尝试
-  - [@vue/composition-api](https://github.com/vuejs/composition-api) - 把 Vue 3 Composition API 带到 Vue 2
-  - [UnpluginVue2ScriptSetup](https://github.com/antfu/unplugin-vue2-script-setup) - 把 Vue 3 `<script setup>` 带到 Vue 2
+  - [VuexPersistedState](https://github.com/robinvdvleuten/vuex-persistedstate) - 持久化 Vuex 状态
   - [UnpluginVueComponents](https://github.com/antfu/unplugin-vue-components) - 自动导入组件
   - [UnpluginIcons](https://github.com/antfu/unplugin-icons) - 自动导入图标
   - [Nuxt](https://nuxtjs.org/)：开箱即用的 SSR、SSG 支持，还附带约定式路由等额外功能
-  - [Lodash](https://lodash.com/)、[Validator](https://github.com/validatorjs/validator.js)、[DayJS](https://dayjs.gitee.io/)、[Iconify](https://iconify.design/)、[Remixicon](https://remixicon.com/)、[Axios](https://axios-http.com/)、[SWRV](https://docs-swrv.netlify.app/)、[VueQuery](https://vue-query.vercel.app/)、[TailwindCSS](https://tailwindcss.com/)，[WindiCSS](https://windicss.org/)……
-- 备选 Vite，生态飞速发展中。
+  - [Lodash](https://lodash.com/)、[Validator](https://github.com/validatorjs/validator.js)、[DayJS](https://dayjs.gitee.io/)、[Iconify](https://iconify.design/)、[Remixicon](https://remixicon.com/)、[Axios](https://axios-http.com/)、[TailwindCSS](https://v1.tailwindcss.com/)……
 
 ---
 
@@ -588,11 +587,12 @@ Gitlab Flow 结合了 Git Flow 和 Github Flow 的优点，也是我个人比较
 
 ---
 
-# 展望
+# 之后可能分享什么
 
-- Node 全栈和 Serverless - [express](https://expressjs.com/)，[koa](https://koajs.com/)，[egg](https://eggjs.org/)，[serverless](https://serverless.com/)，[midway](https://www.midwayjs.org/)，[nest](https://nestjs.com/)
-- 面向现代浏览器的前端开发：[Vite](https://cn.vitejs.dev/)、[Vue 3](https://v3.cn.vuejs.org/)……
-- ...
+- Node 全栈和 Serverless - [express](https://expressjs.com/)、[koa](https://koajs.com/)、[egg](https://eggjs.org/)、[serverless](https://serverless.com/)、[midway](https://www.midwayjs.org/)、[nest](https://nestjs.com/)……
+- 面向现代浏览器的前端开发：[Vite](https://cn.vitejs.dev/)、[Vue3](https://v3.cn.vuejs.org/)、[Pinia](https://pinia.esm.dev/)、[VueQuery](https://vue-query.vercel.app/#/)、[TailwindCSS2](https://tailwindcss.com/)、[WindiCSS](https://windicss.org/)……
+- 拓宽、升级你的技术栈：从 jQuery 到 Vue2、从 Vue2 到 Vue3、从 Vue2 到 React、从 VueCLI 到 Vite……
+- ……
 
 ---
 
